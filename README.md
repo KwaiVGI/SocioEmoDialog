@@ -3,14 +3,15 @@
 Official repository of the SocioEmoDialog dataset
 A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professionally acted dialogues (470+ hours) with synchronized high-quality video and audio. Includes:
 - Actor diversity: 119 actors with varied demographics (age, gender, etc.).
-- Emotion annotations: Predefined emotion labels, including subtle facial expressions, gestures, and vocal tones.
+- Emotion annotations: Discrete emotional labels aligned with sociologically grounded distributions.
 - Diverse scenarios: Covers real-life interactions with natural conversational flow and emotional expressions.
 - Professional recording: Filmed in acoustically treated neutral studios using high-end cameras and microphones.
 
 ---
 
 ## Works on SocioEmoDialog
-### Statistics
+We propose the first high-quality multimodal dialogue dataset aligned with sociologically grounded distributions of emotional expression in everyday human interaction. The data set comprises 21,800 dialogue sessions performed by 119 professional actors, spanning 18 emotional categories and 20 dialogue scenarios, with a total duration of 400 hours.
+### 1. Statistics
 |SocioEmoDialog | Value |
 |--|--|
 |# actors | 119|
@@ -23,7 +24,13 @@ A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professiona
 |avg age | 26|
 |total length (hr) | Over 400|
 
-### Data Field Descriptions
+### 2. Comparison of SocioEmoDialog and pervious datasets
+Comparison of different datasets. SocioEmoDialog excels in expression diversity, actor scale, data scale, and recording quality. T and D denote for *talking* and *dyadic*, respectively.
+<p align="center">
+     <img src="imgs/Comparison.jpg" alt="Image 1" width="1000">
+</p>
+
+### 3. Data Field Descriptions
 #### Script Data Format
 ```
 {
@@ -53,12 +60,10 @@ A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professiona
     - text: The content of the utterance
 
 #### Video Data Format
-path
-
+xxx
 
 ## Getting Started
 ### 1. Environment
-
 > [!Note]
 > Make sure your system has [`git`](https://git-scm.com/), [`conda`](https://anaconda.org/anaconda/conda), and [`FFmpeg`](https://ffmpeg.org/download.html) installed.
 
@@ -140,6 +145,7 @@ Description of Each Item：
 - <video_name>_left_speaker_diarization_asr.json / ...right...: Transcription results (ASR) for the left/right speaker segments
 
 #### Extract ASR-aligned scripts
+Run the following code to retrieve the matching script lines for each actor's utterance.
 ```bash
 python whisper_asr.py
 ```
@@ -164,9 +170,10 @@ xxx
 ## Citation
 If you find SocioEmoDialog useful for your research, welcome to star this repo and cite our work using the following BibTeX:
 ```bibtex
-@article{xxx,
+@unpublished{socioemodialog2025,
   title   = {SocioEmoDialog: A Multimodal Dyadic Dialogue Dataset with Sociologically-Aligned Emotion Distribution},
-  ...
+  author  = {Yi Zheng, Yifan Xu, Yan Zhou, Ming chen, Xiaohan Li, Shenze Huang, Yue Zhang, Likun Yu, Pengfei Wan, Di Zhang, Guoying Zhao},
+  note    = {Under review at NeurIPS 2025},
   year    = {2025}
 }
 ```
