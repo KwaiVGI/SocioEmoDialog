@@ -18,7 +18,7 @@ Official repository of the SocioEmoDialog dataset - A large-scale Chinese audio-
 We propose the first high-quality multimodal dialogue dataset aligned with sociologically grounded distributions of emotional expression in everyday human interaction. The data set comprises 21,800 dialogue sessions performed by 119 professional actors, spanning 18 emotional categories and 20 dialogue scenarios, with a total duration of 400 hours.
 ### 1. Statistics
 |SocioEmoDialog | Value |
-|--|--|
+├──-├──-|
 |# actors | 119|
 |# emotions | 18|
 |# dialogues | 21,880|
@@ -120,24 +120,24 @@ This will extract and prepare audio segments from the videos for ASR.
 **Output Directory Structure**
 After processing, you should get the following structure for each video:
 ```
-|- <video_name>/
-    |- video_segments/
-        |- 000000.mp4
-        |- ...
-    |- wav_left_segments/
-        |- 000000.wav
-        |- ...
-    |- wav_right_segments/
-        |- 000000.wav
-        |- ...
-    |- <video_name>_left.wav
-    |- <video_name>_right.wav
-    |- <video_name>_left_mute.wav
-    |- <video_name>_right_mute.wav
-    |- <video_name>_left_speaker_diarization.log
-    |- <video_name>_right_speaker_diarization.log
-    |- <video_name>_left_speaker_diarization_asr.json
-    |- <video_name>_right_speaker_diarization_asr.json
+├── <video_name>/
+    ├── video_segments/
+        ├── 000000.mp4
+        └── ...
+    ├── wav_left_segments/
+        ├── 000000.wav
+        └── ...
+    ├── wav_right_segments/
+        ├── 000000.wav
+        └── ...
+    ├── <video_name>_left.wav
+    ├── <video_name>_right.wav
+    ├── <video_name>_left_mute.wav
+    ├── <video_name>_right_mute.wav
+    ├── <video_name>_left_speaker_diarization.log
+    ├── <video_name>_right_speaker_diarization.log
+    ├── <video_name>_left_speaker_diarization_asr.json
+    └── <video_name>_right_speaker_diarization_asr.json
 ```
 Description of Each Item：
 - <video_name>: The base name of the original video file
@@ -177,7 +177,7 @@ cd eval_tools/video/BodySegmentationTool
 git clone https://github.com/zllrunning/face-parsing.PyTorch.git
 ```
 Then, refer to the official repository to install dependencies and download the pretrained model (79999_iter.pth).
-Finally, run the following command:
+Once face-parsing.PyTorch is set up, run the following command:
 ```bash
 python BodySegmentationTool.py
 ```
