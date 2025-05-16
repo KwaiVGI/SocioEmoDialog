@@ -204,7 +204,7 @@ If you find SocioEmoDialog useful for your research, welcome to star this repo a
 ```bibtex
 @unpublished{socioemodialog2025,
   title   = {SocioEmoDialog: A Multimodal Dyadic Dialogue Dataset with Sociologically-Aligned Emotion Distribution},
-  author  = {Yi Zheng, Yifan Xu, Yan Zhou, Ming chen, Xiaohan Li, Shenze Huang, Yue Zhang, Likun Yu, Pengfei Wan, Di Zhang, Guoying Zhao},
+  author  = {Yi Zheng, Yifan Xu, Yan Zhou, Hejia Chen, Ming chen, Xiaohan Li, Shenze Huang, Yue Zhang, Likun Yu, Pengfei Wan, Di Zhang, Guoying Zhao},
   note    = {Under review at NeurIPS 2025},
   year    = {2025}
 }
