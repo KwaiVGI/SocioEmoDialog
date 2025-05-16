@@ -7,7 +7,7 @@
 
 ---
 ## Introduction
-Official repository of the SocioEmoDialog dataset - A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professionally acted dialogues (470+ hours) with synchronized high-quality video and audio. Includes:
+Official repository of the SocioEmoDialog dataset - A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professionally acted dialogues (400+ hours) with synchronized high-quality video and audio. Includes:
 - Actor diversity: 119 actors with varied demographics (age, gender, etc.).
 - Emotion annotations: Discrete emotional labels aligned with sociologically grounded distributions.
 - Diverse scenarios: Covers real-life interactions with natural conversational flow and emotional expressions.
