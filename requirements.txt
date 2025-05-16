@@ -1,0 +1,13 @@
+openai
+numpy
+matplotlib
+scipy
+networkx
+gensim
+pyannote.audio
+librosa
+soundfile
+tqdm
+pytorch==2.1.0
+pydub
+whisper

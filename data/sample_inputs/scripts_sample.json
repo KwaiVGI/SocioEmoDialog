@@ -1,0 +1,824 @@
+{
+  "250418_000": {
+    "topic_label": "General Entertainment",
+    "num_utterances": 14,
+    "utterances": [
+      {
+        "utterance_id": "250418_000_000",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Have you been to Shanghai lately?"
+      },
+      {
+        "utterance_id": "250418_000_001",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "Yeah, I've been there. The Shanghai metro is really convenient; it feels like you can get anywhere."
+      },
+      {
+        "utterance_id": "250418_000_002",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "But you don't think those people are tired of walking so fast?"
+      },
+      {
+        "utterance_id": "250418_000_003",
+        "speaker_id": 1,
+        "emotion_label": "Contempt",
+        "text": "If you're slow, don't complain."
+      },
+      {
+        "utterance_id": "250418_000_004",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "I think they're moving fast for a reason. They have to drive."
+      },
+      {
+        "utterance_id": "250418_000_005",
+        "speaker_id": 1,
+        "emotion_label": "Gratitude",
+        "text": "Yeah, it feels like everyone in Shanghai is in a hurry, even the subway is on time."
+      },
+      {
+        "utterance_id": "250418_000_006",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "But I'm not used to that fast-tracking. Sometimes I miss my car."
+      },
+      {
+        "utterance_id": "250418_000_007",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "Ha-ha, me too. It was a little panic at first, and then it got used to it."
+      },
+      {
+        "utterance_id": "250418_000_008",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "However, there are a lot of subways in Shanghai, and sometimes the air is not good inside."
+      },
+      {
+        "utterance_id": "250418_000_009",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Yeah, especially at the peak, that's worse."
+      },
+      {
+        "utterance_id": "250418_000_010",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "However, the subway cars in Shanghai are clean and generally comfortable."
+      },
+      {
+        "utterance_id": "250418_000_011",
+        "speaker_id": 1,
+        "emotion_label": "Pride",
+        "text": "Well, the Shanghai City Government is to be commended for its many subway optimizations."
+      },
+      {
+        "utterance_id": "250418_000_012",
+        "speaker_id": 0,
+        "emotion_label": "Satisfaction",
+        "text": "In fact, every city has its benefits, and it's a little uncomfortable, but it's acceptable."
+      },
+      {
+        "utterance_id": "250418_000_013",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Well, I feel like I can find a place for myself anywhere."
+      }
+    ]
+  },
+  "250418_001": {
+    "topic_label": "Sports",
+    "num_utterances": 14,
+    "utterances": [
+      {
+        "utterance_id": "250418_001_000",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Didn't you go to Beijing last time? It doesn't feel like Shanghai."
+      },
+      {
+        "utterance_id": "250418_001_001",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Yeah, well, the subway in Beijing is sometimes very old and looks a little broken."
+      },
+      {
+        "utterance_id": "250418_001_002",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "But there's some old station, it's smelly, it feels like a trace of history."
+      },
+      {
+        "utterance_id": "250418_001_003",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "That's true. Some stations in Beijing are really special."
+      },
+      {
+        "utterance_id": "250418_001_004",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "It's like that. It's too much to go around in exchange."
+      },
+      {
+        "utterance_id": "250418_001_005",
+        "speaker_id": 1,
+        "emotion_label": "Embarrassment",
+        "text": "Ha-ha. I thought I'd walk that way. I walked a lot."
+      },
+      {
+        "utterance_id": "250418_001_006",
+        "speaker_id": 0,
+        "emotion_label": "Satisfaction",
+        "text": "You're funny, you're a sport, you can experience the subway."
+      },
+      {
+        "utterance_id": "250418_001_007",
+        "speaker_id": 1,
+        "emotion_label": "Gratitude",
+        "text": "However, the subways in Beijing are indeed easy, especially those passing through cities."
+      },
+      {
+        "utterance_id": "250418_001_008",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "But I don't like being too crowded."
+      },
+      {
+        "utterance_id": "250418_001_009",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "That is, the subway in Beijing is like a giant ants nest."
+      },
+      {
+        "utterance_id": "250418_001_010",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "But at least it's a lot of times. It's always on."
+      },
+      {
+        "utterance_id": "250418_001_011",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "Well, the subway in Beijing is old, but it's still working."
+      },
+      {
+        "utterance_id": "250418_001_012",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "I think the subway cars in Beijing are quite spacious and comfortable."
+      },
+      {
+        "utterance_id": "250418_001_013",
+        "speaker_id": 1,
+        "emotion_label": "Satisfaction",
+        "text": "Indeed, there are plenty of seats in the cars, not too crowded."
+      }
+    ]
+  },
+  "250418_002": {
+    "topic_label": "Science & Technology",
+    "num_utterances": 13,
+    "utterances": [
+      {
+        "utterance_id": "250418_002_000",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "Have you ever been on the subway in Nanjing? How do you feel?"
+      },
+      {
+        "utterance_id": "250418_002_001",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "Yeah, Nanjing subways have recently built several new lines, and the whole feeling is modern."
+      },
+      {
+        "utterance_id": "250418_002_002",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "Isn't Nanking subway on time?"
+      },
+      {
+        "utterance_id": "250418_002_003",
+        "speaker_id": 1,
+        "emotion_label": "Pride",
+        "text": "Yes, Nanking's subway time is pretty good, everybody's punctual."
+      },
+      {
+        "utterance_id": "250418_002_004",
+        "speaker_id": 0,
+        "emotion_label": "Embarrassment",
+        "text": "But sometimes I find something smells in Nanking's car."
+      },
+      {
+        "utterance_id": "250418_002_005",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Yeah, especially when it's hot, the air's not really flowing."
+      },
+      {
+        "utterance_id": "250418_002_006",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "Don't you think there's a lot of subways in Nanking? It's uncomfortable."
+      },
+      {
+        "utterance_id": "250418_002_007",
+        "speaker_id": 1,
+        "emotion_label": "Contempt",
+        "text": "You must be too crowded. Everyone's rushing home."
+      },
+      {
+        "utterance_id": "250418_002_008",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "I'm not used to it, either. Maybe it's from Chengdu."
+      },
+      {
+        "utterance_id": "250418_002_009",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "However, the subway station in Nanjing was clearly marked and was not lost."
+      },
+      {
+        "utterance_id": "250418_002_010",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "It is true that, although a little crowded, once in the station, the direction is known."
+      },
+      {
+        "utterance_id": "250418_002_011",
+        "speaker_id": 1,
+        "emotion_label": "Satisfaction",
+        "text": "Well, Nanking subways aren't always very large, but they're comfortable."
+      },
+      {
+        "utterance_id": "250418_002_012",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Overall, it's convenient, and traffic is fluid."
+      }
+    ]
+  },
+  "250418_003": {
+    "topic_label": "Science & Technology",
+    "num_utterances": 13,
+    "utterances": [
+      {
+        "utterance_id": "250418_003_000",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "Have you been to Guangzhou lately? What?"
+      },
+      {
+        "utterance_id": "250418_003_001",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "I've been to Guangzhou. It's convenient."
+      },
+      {
+        "utterance_id": "250418_003_002",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "That must be convenient. Where is the subway in Guangzhou?"
+      },
+      {
+        "utterance_id": "250418_003_003",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Almost every region is covered, even in the suburbs."
+      },
+      {
+        "utterance_id": "250418_003_004",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "Isn't that a lot of people in that car? It's too crowded to breathe."
+      },
+      {
+        "utterance_id": "250418_003_005",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Yeah, especially during peaks, it's pretty crowded."
+      },
+      {
+        "utterance_id": "250418_003_006",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "The subway system in Guangzhou, however, can be time-appropriate and human."
+      },
+      {
+        "utterance_id": "250418_003_007",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "Well, sometimes there's a lot more times at peak times."
+      },
+      {
+        "utterance_id": "250418_003_008",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "Well, at least it doesn't feel like it's hanging out."
+      },
+      {
+        "utterance_id": "250418_003_009",
+        "speaker_id": 1,
+        "emotion_label": "Embarrassment",
+        "text": "But the subway station in Guangzhou seems a little complicated, and it's a little confused when you switch."
+      },
+      {
+        "utterance_id": "250418_003_010",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "Yeah, we've walked several ways to get to the next station."
+      },
+      {
+        "utterance_id": "250418_003_011",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "That's true, if only it were simpler."
+      },
+      {
+        "utterance_id": "250418_003_012",
+        "speaker_id": 0,
+        "emotion_label": "Satisfaction",
+        "text": "In general, however, it is convenient to get used to it."
+      }
+    ]
+  },
+  "250418_004": {
+    "topic_label": "General Entertainment",
+    "num_utterances": 13,
+    "utterances": [
+      {
+        "utterance_id": "250418_004_000",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "Have you been to Chongqing recently? Is the subway different from the rest of the world?"
+      },
+      {
+        "utterance_id": "250418_004_001",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "Yes, Chongqing's subway is special, underground and uphill."
+      },
+      {
+        "utterance_id": "250418_004_002",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "What do you think?"
+      },
+      {
+        "utterance_id": "250418_004_003",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "When I first sat on it, I was a little scared to look outside, but it was fun."
+      },
+      {
+        "utterance_id": "250418_004_004",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "Ha-ha, that must have been a little hard on the air."
+      },
+      {
+        "utterance_id": "250418_004_005",
+        "speaker_id": 1,
+        "emotion_label": "Gratitude",
+        "text": "Well, really, stand up and see. It's a nice view."
+      },
+      {
+        "utterance_id": "250418_004_006",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "Is Chongqing subway a little slower than other cities?"
+      },
+      {
+        "utterance_id": "250418_004_007",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "No, it's not. Although it's a bit twisted, it's still running on time."
+      },
+      {
+        "utterance_id": "250418_004_008",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Well, Chongqing's got a lot of food, and the subway can eat a lot."
+      },
+      {
+        "utterance_id": "250418_004_009",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Well, I'll have to go sit down and have a snack sometime."
+      },
+      {
+        "utterance_id": "250418_004_010",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "Yes, Chongqing's food and subway can bring double enjoyment."
+      },
+      {
+        "utterance_id": "250418_004_011",
+        "speaker_id": 1,
+        "emotion_label": "Satisfaction",
+        "text": "Well, there's got to be another chance, after all, it tastes unique."
+      },
+      {
+        "utterance_id": "250418_004_012",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "Yeah, once. Always wanted to go again."
+      }
+    ]
+  },
+  "250418_005": {
+    "topic_label": "Science & Technology",
+    "num_utterances": 13,
+    "utterances": [
+      {
+        "utterance_id": "250418_005_000",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Haven't you been to Hangzhou lately?"
+      },
+      {
+        "utterance_id": "250418_005_001",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "Yeah, the Hangzhou subway's easy to get anywhere."
+      },
+      {
+        "utterance_id": "250418_005_002",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "What do you think of Hangzhou's subway car?"
+      },
+      {
+        "utterance_id": "250418_005_003",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "It's not really big, but it's clean and it's nice."
+      },
+      {
+        "utterance_id": "250418_005_004",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Isn't the Hangzhou subway fast?"
+      },
+      {
+        "utterance_id": "250418_005_005",
+        "speaker_id": 1,
+        "emotion_label": "Pride",
+        "text": "Yeah, especially the line to the airport. It's so convenient."
+      },
+      {
+        "utterance_id": "250418_005_006",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "But Hangzhou's subway traffic is huge, right?"
+      },
+      {
+        "utterance_id": "250418_005_007",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Yes, especially on holidays. The subway station is crowded."
+      },
+      {
+        "utterance_id": "250418_005_008",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "The Hangzhou subway, however, will not be too difficult to walk, and the station will be clearly marked and easily located."
+      },
+      {
+        "utterance_id": "250418_005_009",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "Well, it's a little crowded, but it's generally quite efficient."
+      },
+      {
+        "utterance_id": "250418_005_010",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "I'd like to have a seat in Hangzhou and a visit to Lake West."
+      },
+      {
+        "utterance_id": "250418_005_011",
+        "speaker_id": 1,
+        "emotion_label": "Joy",
+        "text": "West Lake, that's Hangzhou's soul. Take the subway and see it at any stop."
+      },
+      {
+        "utterance_id": "250418_005_012",
+        "speaker_id": 0,
+        "emotion_label": "Hope",
+        "text": "So I can enjoy two beautiful, two birds with one stone."
+      }
+    ]
+  },
+  "250418_006": {
+    "topic_label": "General Entertainment",
+    "num_utterances": 12,
+    "utterances": [
+      {
+        "utterance_id": "250418_006_000",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Have you seen relatives lately? How do you deal with their marriages?"
+      },
+      {
+        "utterance_id": "250418_006_001",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "When will you find someone?"
+      },
+      {
+        "utterance_id": "250418_006_002",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "Every time I do this, I'm sick of it. I'm just gonna say something."
+      },
+      {
+        "utterance_id": "250418_006_003",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Find someone in a hurry, and when I'm old, no one will think about it."
+      },
+      {
+        "utterance_id": "250418_006_004",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "Ha ha, you're forcing yourself into despair. But the elders are stubborn."
+      },
+      {
+        "utterance_id": "250418_006_005",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "Well, they always think marriage means everything, and I really don't get it."
+      },
+      {
+        "utterance_id": "250418_006_006",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "I think it would have worked better if it had been easy."
+      },
+      {
+        "utterance_id": "250418_006_007",
+        "speaker_id": 1,
+        "emotion_label": "Love",
+        "text": "I tried to say, It hasn't happened yet. But they always said, It will never wait for you."
+      },
+      {
+        "utterance_id": "250418_006_008",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "At the end of the day, that perception is not necessarily bad, and they care about us in the wrong way."
+      },
+      {
+        "utterance_id": "250418_006_009",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "But it's always like being forced into marriage, and it's stressful."
+      },
+      {
+        "utterance_id": "250418_006_010",
+        "speaker_id": 0,
+        "emotion_label": "Gratitude",
+        "text": "You can actually think about changing the subject, talking about work or life."
+      },
+      {
+        "utterance_id": "250418_006_011",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Well, next time, at least a little bit less awkward."
+      }
+    ]
+  },
+  "250418_007": {
+    "topic_label": "General Entertainment",
+    "num_utterances": 12,
+    "utterances": [
+      {
+        "utterance_id": "250418_007_000",
+        "speaker_id": 0,
+        "emotion_label": "Anger",
+        "text": "So is my family. It's driving me crazy."
+      },
+      {
+        "utterance_id": "250418_007_001",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "I don't get it. Why is everyone so serious about getting married?"
+      },
+      {
+        "utterance_id": "250418_007_002",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "Indeed, it is understandable that, after all, their generation is married early, so it may be felt that marriage is the ultimate goal of life."
+      },
+      {
+        "utterance_id": "250418_007_003",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Yeah, but not in modern times, and personal development should not be neglected."
+      },
+      {
+        "utterance_id": "250418_007_004",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "I'm now pursuing my career. Love slowly."
+      },
+      {
+        "utterance_id": "250418_007_005",
+        "speaker_id": 1,
+        "emotion_label": "Gratitude",
+        "text": "Yes, they should have listened to that."
+      },
+      {
+        "utterance_id": "250418_007_006",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "But they always felt that when they got married, everything would settle down."
+      },
+      {
+        "utterance_id": "250418_007_007",
+        "speaker_id": 1,
+        "emotion_label": "Alertness",
+        "text": "Well, I don't know why they always think marriage solves everything."
+      },
+      {
+        "utterance_id": "250418_007_008",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "It's like, Marriage = security of life. Who said that?"
+      },
+      {
+        "utterance_id": "250418_007_009",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Why don't you learn?"
+      },
+      {
+        "utterance_id": "250418_007_010",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "That's funny."
+      },
+      {
+        "utterance_id": "250418_007_011",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "They can only laugh. They won't understand what we think anyway."
+      }
+    ]
+  },
+  "250418_008": {
+    "topic_label": "Politics",
+    "num_utterances": 11,
+    "utterances": [
+      {
+        "utterance_id": "250418_008_000",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "And the other day, my dad started saying, It's not hard to find someone, it's hard to find something right, and I almost turned my eyes."
+      },
+      {
+        "utterance_id": "250418_008_001",
+        "speaker_id": 1,
+        "emotion_label": "Anger",
+        "text": "And he's so incomprehensible. Did you tell him that you know that suitability is all that matters?"
+      },
+      {
+        "utterance_id": "250418_008_002",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "I told him, but he always felt that the longer it took, the less chance he had."
+      },
+      {
+        "utterance_id": "250418_008_003",
+        "speaker_id": 1,
+        "emotion_label": "Love",
+        "text": "Well, that's what the elders think. Don't worry, just tell them."
+      },
+      {
+        "utterance_id": "250418_008_004",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "But every time I say that, it's really annoying, and every time I'm forced to marry, I'm going to crash."
+      },
+      {
+        "utterance_id": "250418_008_005",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Can your marriage represent my future?"
+      },
+      {
+        "utterance_id": "250418_008_006",
+        "speaker_id": 0,
+        "emotion_label": "Contempt",
+        "text": "Ha-ha, that scares them!"
+      },
+      {
+        "utterance_id": "250418_008_007",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "I'm more focused on myself now."
+      },
+      {
+        "utterance_id": "250418_008_008",
+        "speaker_id": 0,
+        "emotion_label": "Gratitude",
+        "text": "Yeah, it's both responsive and not too straightforward."
+      },
+      {
+        "utterance_id": "250418_008_009",
+        "speaker_id": 1,
+        "emotion_label": "Hope",
+        "text": "But I always think that these words also reflect their over-idealization of marriage."
+      },
+      {
+        "utterance_id": "250418_008_010",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "Well, it's also a problem, and it's hard to convince the elders that getting married is like being happy."
+      }
+    ]
+  },
+  "250418_009": {
+    "topic_label": "General Entertainment",
+    "num_utterances": 12,
+    "utterances": [
+      {
+        "utterance_id": "250418_009_000",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "Yesterday my mother sent me a message saying, You must get married soon."
+      },
+      {
+        "utterance_id": "250418_009_001",
+        "speaker_id": 1,
+        "emotion_label": "Anger",
+        "text": "Well, my mom always does, and I'm starting to wonder if I'm getting old."
+      },
+      {
+        "utterance_id": "250418_009_002",
+        "speaker_id": 0,
+        "emotion_label": "Love",
+        "text": "Indeed, age was a problem, but marriage should not be the only criterion."
+      },
+      {
+        "utterance_id": "250418_009_003",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Yeah, I think life has many goals. Marriage is just one of them."
+      },
+      {
+        "utterance_id": "250418_009_004",
+        "speaker_id": 0,
+        "emotion_label": "Other",
+        "text": "I don't want to. The right person hasn't met."
+      },
+      {
+        "utterance_id": "250418_009_005",
+        "speaker_id": 1,
+        "emotion_label": "Contempt",
+        "text": "Ha ha, you say that, and they say, When do the right people meet?"
+      },
+      {
+        "utterance_id": "250418_009_006",
+        "speaker_id": 0,
+        "emotion_label": "Alertness",
+        "text": "Yeah, and then they're gonna start introducing me to a date, totally non-negotiable."
+      },
+      {
+        "utterance_id": "250418_009_007",
+        "speaker_id": 1,
+        "emotion_label": "Anger",
+        "text": "Well, I have to say, it's hard to understand the elders' idea of marriage, and it's really good to be married."
+      },
+      {
+        "utterance_id": "250418_009_008",
+        "speaker_id": 0,
+        "emotion_label": "Joy",
+        "text": "No, after all, they just want us to be safe."
+      },
+      {
+        "utterance_id": "250418_009_009",
+        "speaker_id": 1,
+        "emotion_label": "Other",
+        "text": "Yes, but our generation also has our pace, which cannot be measured by their standards."
+      },
+      {
+        "utterance_id": "250418_009_010",
+        "speaker_id": 0,
+        "emotion_label": "Satisfaction",
+        "text": "Even if they don't understand, we have to stick to our choices."
+      },
+      {
+        "utterance_id": "250418_009_011",
+        "speaker_id": 1,
+        "emotion_label": "Gratitude",
+        "text": "Well, take it easy. You know what you want."
+      }
+    ]
+  }
+}
