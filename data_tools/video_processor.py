@@ -3,6 +3,7 @@ from pyannote.audio import Pipeline
 
 import subprocess
 import os, re
+from pathlib import Path
 from tqdm import tqdm
 
 from speak_diarization import diarization_process
@@ -100,8 +101,17 @@ def cut_video_ffmpeg(input_path, output_path, start_time, end_time):
     subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 if __name__ == "__main__":
+    project_dir = Path(__file__).resolve().parent.parent
+    video_dir = project_dir / 'data/videos'
+    paths = [
+        os.path.join(root, file)
+        for root, _, files in os.walk(video_dir)
+        for file in files
+        if file.endswith('.mp4')
+    ]
+
     vp = VideoProcessor()
-    paths = ['./video/test.mp4']
     for path in tqdm(paths):
+        print(path)
         vp.init_path(path)
         vp.process()

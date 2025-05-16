@@ -18,7 +18,7 @@ torch.backends.cudnn.allow_tf32 = True
 
 def sec_to_hhmmss(sec):
     """
-    将秒数转换为 hh:mm:ss.ms 格式
+    Convert time in seconds to the hh:mm:ss.ms format
     """
     h = int(sec // 3600)
     m = int((sec % 3600) // 60)
@@ -28,14 +28,14 @@ def sec_to_hhmmss(sec):
 
 def merge_segments(segments, gap_threshold=0.1):
     """
-    合并相邻且连续（间隔小于 gap_threshold 秒）的同一说话人分段
+    Merge adjacent and continuous segments of the same speaker if the gap is less than gap_threshold seconds
     """
     segments = sorted(segments, key=lambda x: x[0])
     merged = []
     for seg in segments:
         start, end, speaker = seg
         if merged and speaker == merged[-1][2] and start - merged[-1][1] < gap_threshold:
-            # 与上一个段同一说话人且间隔很短，则合并
+            # If the segment belongs to the same speaker as the previous one and the gap is short, merge them
             merged[-1] = (merged[-1][0], end, speaker)
         else:
             merged.append(seg)
@@ -43,7 +43,7 @@ def merge_segments(segments, gap_threshold=0.1):
 
 def compute_speaker_energy(audio, sr, segments):
     """
-    根据每个分段的 RMS 能量（加权时间长度）计算每个说话人的平均能量
+    Compute the average energy for each speaker based on the RMS energy of each segment, weighted by its duration
     """
     speaker_energy = {}
     speaker_duration = {}
@@ -54,32 +54,32 @@ def compute_speaker_energy(audio, sr, segments):
         segment_audio = audio[start_sample:end_sample]
         if len(segment_audio) == 0:
             continue
-        # 计算 RMS 能量
+        # Compute RMS
         rms = np.sqrt(np.mean(segment_audio**2))
         duration = end - start
         speaker_energy[speaker] = speaker_energy.get(speaker, 0) + rms * duration
         speaker_duration[speaker] = speaker_duration.get(speaker, 0) + duration
-    # 计算平均能量（加权）
+    # Compute weighted average energy
     avg_energy = {spk: speaker_energy[spk] / speaker_duration[spk] for spk in speaker_energy}
     return avg_energy
 
 def merge_similar_speakers(avg_energy, threshold=0.1):
     """
-    将能量差异较小的speaker聚类。  
-    参数：
-      avg_energy：字典，key为原speaker标签，value为平均能量。
-      threshold：如果两个speaker的平均能量之差小于该阈值（绝对值），则认为它们相似。
-    返回：
-      clusters：列表，每个元素是一个聚类，聚类内包含 (speaker, energy) 元组。
+    Cluster speakers with similar energy levels.
+    @Parameters:
+        avg_energy: A dictionary where each key is the original speaker label and the value is the corresponding average energy.
+        threshold: If the absolute difference in average energy between two speakers is less than this threshold, they are considered similar.
+    @Returns:
+        clusters: A list of clusters, where each cluster is a list of (speaker, energy) tuples.
     """
-    # 按平均能量从小到大排序
+    # Sorted by avg energy
     sorted_speakers = sorted(avg_energy.items(), key=lambda x: x[1])
     clusters = []
     for spk, energy in sorted_speakers:
         if not clusters:
             clusters.append([(spk, energy)])
         else:
-            # 与当前聚类最后一个speaker比较，采用绝对差异判断
+            # Compare with the last speaker in the current cluster using absolute energy difference
             _, last_energy = clusters[-1][-1]
             if abs(energy - last_energy) < threshold:
                 clusters[-1].append((spk, energy))
@@ -89,26 +89,26 @@ def merge_similar_speakers(avg_energy, threshold=0.1):
 
 def assign_merged_labels(avg_energy, merge_threshold=0.1):
     """
-    根据能量聚类结果对原始speaker标签进行重新映射，
-    合并能量相近的speaker，并根据平均能量从高到低排序后分配新标签：
-      能量最高的为 speaker 0，次高为 speaker 1，依次类推。
+    Remap the original speaker labels based on the energy-based clustering results.
+    Merge speakers with similar energy levels, and assign new labels according to the average energy in descending order:
+    the speaker with the highest energy is assigned as speaker 0, the next as speaker 1, and so on.
     """
     clusters = merge_similar_speakers(avg_energy, threshold=merge_threshold)
-    # 对每个聚类计算平均能量
+    # Compute the average energy for each cluster
     cluster_info = []
     for cluster in clusters:
         speakers = [spk for spk, _ in cluster]
-        # 聚类平均能量
+        # Average energy of the cluster
         cluster_avg = np.mean([energy for _, energy in cluster])
         cluster_info.append((speakers, cluster_avg))
     
-    # 按聚类平均能量从高到低排序
+    # Sort clusters by average energy in descending order
     cluster_info = sorted(cluster_info, key=lambda x: x[1], reverse=True)
     
     speaker_mapping = {}
     for new_label, (speakers, _) in enumerate(cluster_info):
         for spk in speakers:
-            # 新的标签格式为 "speaker X"
+            # Assign new label in the format "speaker X"
             speaker_mapping[spk] = f"speaker {new_label}"
     return speaker_mapping
 
@@ -130,25 +130,22 @@ def diarization_process(vp, audio_file, wav_seg_dir):
     for turn, _, speaker in diarization.itertracks(yield_label=True):
         segments.append((turn.start, turn.end, speaker))
     
-    # 初步合并相邻连续段（gap_threshold 根据实际情况设置，例如这里用1秒）
+    # Perform initial merging of adjacent and continuous segments 
+    # (gap_threshold can be adjusted as needed; set to 1 second here)
     merged_segments = merge_segments(segments, gap_threshold=1)
     
-    # 加载整个音频文件以便计算能量
     audio, sr = librosa.load(audio_file, sr=None)
-    
-    # 计算每个原始speaker的平均 RMS 能量
+    # Compute the average RMS energy for each original speaker
     avg_energy = compute_speaker_energy(audio, sr, merged_segments)
-    
-    # 根据能量差异（绝对值小于0.1）合并相近的speaker
+    # Merge speakers with similar energy levels (absolute difference < 0.1)
     speaker_mapping = assign_merged_labels(avg_energy, merge_threshold=0.02)
-    
-    # 根据新的speaker_mapping更新每个分段的标签
+    # Update each segment's speaker label based on the new mapping
     updated_segments = [(start, end, speaker_mapping.get(orig_spk, orig_spk)) 
                         for (start, end, orig_spk) in merged_segments]
-    # 再次对更新后的分段按新标签进行合并
+    # Merge the updated segments again based on the new speaker labels
     new_merged_segments = merge_segments(updated_segments, gap_threshold=1)
     
-    # 准备写入文本文件的内容
+    # Prepare content for writing to the log file
     txt_lines = []
     txt_lines.append("Speaker Energies:")
     for spk in sorted(avg_energy.keys()):
@@ -156,16 +153,16 @@ def diarization_process(vp, audio_file, wav_seg_dir):
         txt_lines.append(f"Original: {spk}, Mapped: {mapped_label}, Energy: {avg_energy[spk]:.4f}")
     txt_lines.append("\nSegment Information:")
     
-    # 复制原音频用于静音处理
+    # copy to mute
     audio_mute = np.copy(audio)
     
-    # 用于保存 speaker0 分段的编号计数
+
     speaker0_counter = 0
-    
-    # 遍历新的合并分段，将结果信息保存到文本中，并处理音频（静音以及保存 speaker0 段）
+    # Iterate over the newly merged segments, write the result info to the log,
+    # and process the audio (mute non-target parts and save speaker 0 segments)
     for seg in new_merged_segments:
         start, end, mapped_label = seg
-        # 如果分段时长小于1秒，则直接丢弃
+        # Discard the segment if its duration is less than 1 second
         if (end - start) < 1.0:
             continue
 
@@ -173,7 +170,8 @@ def diarization_process(vp, audio_file, wav_seg_dir):
         end_str = sec_to_hhmmss(end)
         line = f"{start_str} - {end_str} {mapped_label};"
         
-        # 如果是 speaker 0，则保存为独立的 wav 文件，并在文本中记录文件名
+        # If the speaker is speaker 0, save the segment as an individual .wav file
+        # and record the filename in the log text
         if mapped_label == "speaker 0":
             filename = os.path.join(seg_save_path, "{:06d}.wav".format(speaker0_counter))
             start_sample = int(start * sr)
@@ -183,17 +181,17 @@ def diarization_process(vp, audio_file, wav_seg_dir):
             line += " [Saved as {:06d}.wav]".format(speaker0_counter)
             speaker0_counter += 1
         else:
-            # 非 speaker 0 部分静音处理
+            # Mute segments that do not belong to speaker 0
             start_sample = int(start * sr)
             end_sample = int(end * sr)
             audio_mute[start_sample:end_sample] = 0.0
             
         txt_lines.append(line)
 
-    # 将文本内容写入 log 文件
+    # write log
     with open(log_save_path, "w", encoding="utf-8") as f:
         for line in txt_lines:
             f.write(line + "\n")
     
-    # 保存静音处理后的音频到 mute.wav
+    # Save the muted audio to mute.wav
     sf.write(mute_save_path, audio_mute, sr)

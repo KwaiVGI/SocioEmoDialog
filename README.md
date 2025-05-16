@@ -54,21 +54,7 @@ A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professiona
 
 #### Video Data Format
 path
-```
-<date>_md5_<left/right>.mp4
-```
-```
-[
-    {
-        "idx": <segment id>,
-        "start": <start time>,
-        "end": <end time>,
-        "asr": <asr text>,
-        "asr_flag": true or false
-    },
-    ...
-]
-```
+
 
 ## Getting Started
 ### 1. Environment
@@ -78,7 +64,7 @@ path
 
 ```bash
 git clone https://github.com/xxx
-cd socioemodialog
+cd SocioEmoDialog
 
 # create env using conda
 conda create -n socioemodialog python==3.8
@@ -92,8 +78,9 @@ You should install the corresponding torch version. Visit the [PyTorch Official 
 The easiest way to download our dataset is from HuggingFace:
 ```bash
 # !pip install -U "huggingface_hub[cli]"
-huggingface-cli download xxx --local-dir data --exclude "*.git*" "README.md" "docs"
+huggingface-cli download xxx --local-dir data/videos --exclude "*.git*" "README.md" "docs"
 ```
+
 ### 3. Data process
 #### Process video files
 The original video is `<path_to_video.mp4>`, in which the audio track contains a stereo structure: the left channel corresponds to the speech of the actor on the left, and the right channel corresponds to the actor on the right. We process the raw data through the following steps:
@@ -108,9 +95,10 @@ Based on the speaker segmentation and temporal alignment, the original video is 
 5. Result Saving
 Each transcribed speech segment, along with its timestamp information, is saved as a structured .json file, named consistently with the original audio file.
 
-Place the raw video files in the following directory:
+**Data Processing Instructions**
+To process the data, ensure that the raw video files are located in the following directory:
 ```bash
-data_tools/video/
+data/videos/
 ```
 Then run the processing script:
 ```bash
@@ -119,13 +107,45 @@ python video_processor.py
 ```
 This will extract and prepare audio segments from the videos for ASR.
 
+**Output Directory Structure**
+After processing, you should get the following structure for each video:
+```
+|- <video_name>/
+    |- video_segments/
+        |- 000000.mp4
+        |- ...
+    |- wav_left_segments/
+        |- 000000.wav
+        |- ...
+    |- wav_right_segments/
+        |- 000000.wav
+        |- ...
+    |- <video_name>_left.wav
+    |- <video_name>_right.wav
+    |- <video_name>_left_mute.wav
+    |- <video_name>_right_mute.wav
+    |- <video_name>_left_speaker_diarization.log
+    |- <video_name>_right_speaker_diarization.log
+    |- <video_name>_left_speaker_diarization_asr.json
+    |- <video_name>_right_speaker_diarization_asr.json
+```
+Description of Each Item：
+- <video_name>: The base name of the original video file
+- video_segments/: Contains turn-level video clips extracted from the original video
+- wav_left_segments/: Contains audio segments from the left channel (left speaker only)
+- wav_right_segments/: Contains audio segments from the right channel (right speaker only)
+- <video_name>_left.wav / <video_name>_right.wav: The raw audio extracted from the left/right channel
+- <video_name>_left_mute.wav / <video_name>_right_mute.wav: The left/right audio with the non-target speaker muted
+- <video_name>_left_speaker_diarization.log / ...right...: Log file containing speaker diarization segment info
+- <video_name>_left_speaker_diarization_asr.json / ...right...: Transcription results (ASR) for the left/right speaker segments
+
 #### Extract ASR-aligned scripts
 ```bash
 python whisper_asr.py
 ```
 
 ## Evaluation
-### emotion
+### 1. Emotion
 To test the emotion classification functionality, run the following command:
 ```bash
 cd eval_tools
@@ -137,6 +157,9 @@ To test the emotion statistics functionality, run the following command:
 ```bash
 python emotion/emotion_evaluator.py
 ```
+
+### 2. Videos
+xxx
 
 ## Citation
 If you find SocioEmoDialog useful for your research, welcome to star this repo and cite our work using the following BibTeX:

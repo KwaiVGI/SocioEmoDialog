@@ -11,13 +11,14 @@ import numpy as np
 
 class SimVsm:
 
-    '''比较相似度'''
+    '''Compare similarity'''
     def distance(self, text1, text2):
         words1 = [word.word for word in pesg.cut(text1) if word.flag[0] not in ['u', 'x', 'w']]
         words2 = [word.word for word in pesg.cut(text2) if word.flag[0] not in ['u', 'x', 'w']]
         tfidf_reps = self.tfidf_rep([words1, words2])
         return self.cosine_sim(np.array(tfidf_reps[0]), np.array(tfidf_reps[1]))
-    '''对句子进行tfidf向量表示'''
+    
+    '''Represent sentences using TF-IDF vectors'''
     def tfidf_rep(self, sents):
         sent_list = []
         df_dict = {}
@@ -45,23 +46,13 @@ class SimVsm:
             tfidf_list.append(tmp)
         return tfidf_list
 
-    '''余弦相似度计算相似度'''
+    '''Cosine similarity is used to compute similarity'''
     def cosine_sim(self, vector1, vector2):
         cos1 = np.sum(vector1 * vector2)
         cos21 = np.sqrt(sum(vector1 ** 2))
         cos22 = np.sqrt(sum(vector2 ** 2))
         similarity = cos1 / float(cos21 * cos22)
         return similarity
-def test():
-    text1 = '说到比赛了,你还记得咱们一起参加那个比赛吗?我虽然现在忘记了具体的规则,但是他那个过程真的紧张用力。'
-    text2 = '你记得我们一起参加的那个比赛吗？虽然我现在有点忘了具体的规则，但那个过程真的是紧张又刺激！'
-
-    simer = SimVsm()
-    sim = simer.distance(text1, text2)
-    print(sim)
-
-test()
-
 
 
 
