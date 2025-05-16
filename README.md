@@ -15,7 +15,7 @@ Official repository of the SocioEmoDialog dataset - A large-scale Chinese audio-
 
 
 ## Works on SocioEmoDialog
-We propose the first high-quality multimodal dialogue dataset aligned with sociologically grounded distributions of emotional expression in everyday human interaction. The data set comprises 21,800 dialogue sessions performed by 119 professional actors, spanning 18 emotional categories and 20 dialogue scenarios, with a total duration of 400 hours.
+We propose the first high-quality multimodal dialogue dataset aligned with sociologically grounded distributions of emotional expression in everyday human interaction. The data set comprises 21,800 dialogue sessions performed by 119 professional actors, spanning 18 emotional categories, with a total duration of 400 hours.
 ### 1. Statistics
 |SocioEmoDialog | Value |
 |--|--|
