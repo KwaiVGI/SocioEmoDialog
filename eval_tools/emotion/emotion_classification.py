@@ -57,7 +57,7 @@ def classify_dialogue_emotion(dialogue: str) -> str:
 # sample
 if __name__ == "__main__":
     project_dir = Path(__file__).resolve().parent.parent.parent
-    sample_path = project_dir / 'data/sample_inputs/scripts_sample.json'
+    sample_path = project_dir / 'data/scripts/scripts_sample.json'
 
     dataset = load_json(sample_path)
 

@@ -88,8 +88,10 @@ You should install the corresponding torch version. Visit the [PyTorch Official 
 The easiest way to download our dataset is from HuggingFace:
 ```bash
 # !pip install -U "huggingface_hub[cli]"
-huggingface-cli download SocioEmoDialog/SocioEmoDialog-21.8K --local-dir data/videos --exclude "*.git*" "README.md" "docs"
+huggingface-cli download SocioEmoDialog/SocioEmoDialog-21.8K --local-dir data --exclude "*.git*" "README.md" "docs"
 ```
+Then, place the `raw_videos` folder into `data/videos`,
+and place the `SocioEmoDialog_scripts.json` file and the `SocioEmoDialog_scripts_cn.json` file into `data/scripts`.
 
 ### 3. Data process
 #### Process video files

@@ -316,7 +316,7 @@ def draw_freq(res):
 
 def main():
     project_dir = Path(__file__).resolve().parent.parent.parent
-    sample_path = project_dir / 'data/sample_inputs/scripts_sample.json'
+    sample_path = project_dir / 'data/scripts/scripts_sample.json'
     #sample_path = '/Users/if/Desktop/SED_scrpits.jsonl'
     stats_emotion(sample_path)
 

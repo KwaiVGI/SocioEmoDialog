@@ -23,7 +23,7 @@ def stats_similarity(asr_path, date):
     simvsm = SimVsm()
     simtoken = SimTokenVec()
 
-    dataset_script = load_json('xxx/SED_scrpits_cn.json')
+    dataset_script = load_json('scripts/SocioEmoDialog_scrpits_cn.json')
     dialogues = [dataset_script[dk] for dk in dataset_script.keys() if date in dk]
     asr_json = load_json(asr_path)
 
