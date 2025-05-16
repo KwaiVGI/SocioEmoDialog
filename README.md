@@ -32,7 +32,7 @@ We propose the first high-quality multimodal dialogue dataset aligned with socio
 ### 2. Comparison of SocioEmoDialog and pervious datasets
 Comparison of different datasets. SocioEmoDialog excels in expression diversity, actor scale, data scale, and recording quality. T and D denote for *talking* and *dyadic*, respectively.
 <p align="center">
-     <img src="imgs/Comparison.jpg" alt="Image 1" width="1000">
+     <img src="imgs/Comparison.png" alt="Image 1" width="1000">
 </p>
 
 ### 3. Data Field Descriptions
@@ -204,8 +204,6 @@ If you find SocioEmoDialog useful for your research, welcome to star this repo a
 ```bibtex
 @unpublished{socioemodialog2025,
   title   = {SocioEmoDialog: A Multimodal Dyadic Dialogue Dataset with Sociologically-Aligned Emotion Distribution},
-  author  = {Yi Zheng, Yifan Xu, Yan Zhou, Hejia Chen, Ming chen, Xiaohan Li, Shenze Huang, Yue Zhang, Likun Yu, Pengfei Wan, Di Zhang, Guoying Zhao},
-  note    = {Under review at NeurIPS 2025},
   year    = {2025}
 }
 ```
