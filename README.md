@@ -30,7 +30,7 @@ We propose the first high-quality multimodal dialogue dataset aligned with socio
 |total length (hr) | Over 400|
 
 ### 2. Comparison of SocioEmoDialog and pervious datasets
-Comparison of different datasets. SocioEmoDialog excels in expression diversity, actor scale, data scale, and recording quality. T and D denote for *talking* and *dyadic*, respectively.
+Comparison of different datasets. SocioEmoDialog excels in expression diversity, actor scale, data scale, and recording quality. S and D denote for *single* and *dyadic*, respectively.
 <p align="center">
      <img src="imgs/Comparison.png" alt="Image 1" width="1000">
 </p>
