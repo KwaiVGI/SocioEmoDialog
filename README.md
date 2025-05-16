@@ -1,13 +1,18 @@
 # SocioEmoDialog: A Multimodal Dyadic Dialogue Dataset with Sociologically-Aligned Emotion Distribution
 
-Official repository of the SocioEmoDialog dataset
-A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professionally acted dialogues (470+ hours) with synchronized high-quality video and audio. Includes:
+<div>
+  <!-- <a href='LICENSE'><img src='https://img.shields.io/badge/license-MIT-yellow'></a> -->
+  <a href='https://huggingface.co/datasets/SocioEmoDialog/SocioEmoDialog-21.8K'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue'></a>
+</div>
+
+---
+## Introduction
+Official repository of the SocioEmoDialog dataset - A large-scale Chinese audio-visual dialogue dataset featuring 21,800 professionally acted dialogues (470+ hours) with synchronized high-quality video and audio. Includes:
 - Actor diversity: 119 actors with varied demographics (age, gender, etc.).
 - Emotion annotations: Discrete emotional labels aligned with sociologically grounded distributions.
 - Diverse scenarios: Covers real-life interactions with natural conversational flow and emotional expressions.
 - Professional recording: Filmed in acoustically treated neutral studios using high-end cameras and microphones.
 
----
 
 ## Works on SocioEmoDialog
 We propose the first high-quality multimodal dialogue dataset aligned with sociologically grounded distributions of emotional expression in everyday human interaction. The data set comprises 21,800 dialogue sessions performed by 119 professional actors, spanning 18 emotional categories and 20 dialogue scenarios, with a total duration of 400 hours.
@@ -60,7 +65,7 @@ Comparison of different datasets. SocioEmoDialog excels in expression diversity,
     - text: The content of the utterance
 
 #### Video Data Format
-xxx
+Each video is named using the pattern `<date>_md5_<side>.mp4`, where `<date>` indicates the recording date, and `<side>` denotes either `left` or `right`, corresponding to the position of the speaker in the video.
 
 ## Getting Started
 ### 1. Environment
@@ -68,7 +73,7 @@ xxx
 > Make sure your system has [`git`](https://git-scm.com/), [`conda`](https://anaconda.org/anaconda/conda), and [`FFmpeg`](https://ffmpeg.org/download.html) installed.
 
 ```bash
-git clone https://github.com/xxx
+git clone https://github.com/KwaiVGI/SocioEmoDialog.git
 cd SocioEmoDialog
 
 # create env using conda
@@ -83,12 +88,12 @@ You should install the corresponding torch version. Visit the [PyTorch Official 
 The easiest way to download our dataset is from HuggingFace:
 ```bash
 # !pip install -U "huggingface_hub[cli]"
-huggingface-cli download xxx --local-dir data/videos --exclude "*.git*" "README.md" "docs"
+huggingface-cli download SocioEmoDialog/SocioEmoDialog-21.8K --local-dir data/videos --exclude "*.git*" "README.md" "docs"
 ```
 
 ### 3. Data process
 #### Process video files
-The original video is `<path_to_video.mp4>`, in which the audio track contains a stereo structure: the left channel corresponds to the speech of the actor on the left, and the right channel corresponds to the actor on the right. We process the raw data through the following steps:
+The original video is `<video_name.mp4>`, in which the audio track contains a stereo structure: the left channel corresponds to the speech of the actor on the left, and the right channel corresponds to the actor on the right. We process the raw data through the following steps:
 1. Channel Separation
 We use ffmpeg to extract the left and right audio channels into two separate mono audio files, corresponding to the speech of the left and right actors, respectively.
 2. Speaker Diarization
@@ -165,7 +170,32 @@ python emotion/emotion_evaluator.py
 ```
 
 ### 2. Videos
-xxx
+#### Body Segmentation
+First, clone [the official repository](https://github.com/zllrunning/face-parsing.PyTorch) and follow its instructions to set up the environment:
+```bash
+cd eval_tools/video/BodySegmentationTool
+git clone https://github.com/zllrunning/face-parsing.PyTorch.git
+```
+Then, refer to the official repository to install dependencies and download the pretrained model (79999_iter.pth).
+Finally, run the following command:
+```bash
+python BodySegmentationTool.py
+```
+
+#### Eyes Tracking
+First, clone [the official repository](https://github.com/TadasBaltrusaitis/OpenFace) and follow its instructions to set up the environment:
+```bash
+cd eval_tools/video/EyesTracking
+git clone https://github.com/TadasBaltrusaitis/OpenFace.git
+```
+Once OpenFace is set up, run the eye tracking script:
+```bash
+python EyesTracking.py
+```
+To generate a heatmap of head pose data, run the following script:
+```bash
+python DataToPlot_HeatMap.py
+```
 
 ## Citation
 If you find SocioEmoDialog useful for your research, welcome to star this repo and cite our work using the following BibTeX:
