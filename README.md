@@ -35,7 +35,13 @@ Comparison of different datasets. SocioEmoDialog excels in expression diversity,
      <img src="imgs/Comparison.png" alt="Image 1" width="1000">
 </p>
 
-### 3. Data Field Descriptions
+### 3. Emotion Distribution Aligned with Real-World Statistics
+In real life, people experience a broad spectrum of emotions on a daily basis, and the frequency of these emotions is inherently imbalanced. As in relevant sociological research, the natural distribution of emotions in everyday life is heavily skewed, with neutral and mildly positive emotions occurring far more frequently than extreme emotions such as anger or fear. Guided by these statistical findings, our dataset is constructed to closely reflect real-world emotional frequencies.
+<p align="center">
+     <img src="imgs/EmotionFre.png" alt="Image 1" width="1000">
+</p>
+
+### 4. Data Field Descriptions
 #### Script Data Format
 ```
 {
